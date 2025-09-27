@@ -1,0 +1,53 @@
+{
+  "name": "sri-bharath-construction",
+  "version": "1.0.0",
+  "description": "Premium Construction Company Website - Modern, responsive website showcasing 20+ years of construction excellence in Chennai",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8080 --entry-file=index.html",
+    "dev": "live-server --port=3000 --entry-file=index.html --watch=assets/",
+    "build": "echo 'Static website - no build process required'",
+    "test": "echo 'No tests specified yet'",
+    "lint:css": "stylelint 'assets/css/**/*.css'",
+    "lint:js": "eslint 'assets/js/**/*.js'",
+    "preview": "python -m http.server 8000"
+  },
+  "keywords": [
+    "construction",
+    "chennai",
+    "residential",
+    "commercial",
+    "building",
+    "contractor",
+    "real-estate",
+    "architecture",
+    "website",
+    "responsive"
+  ],
+  "author": {
+    "name": "Sri Bharath Construction",
+    "url": "https://sribharathconstruction.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/sri-bharath-construction.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/sri-bharath-construction/issues"
+  },
+  "homepage": "https://yourusername.github.io/sri-bharath-construction/",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "stylelint": "^15.0.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,16 @@
+/*!
+ * Sri Bharath Construction - Modern Construction Company Website
+ * Version: 1.0.0
+ * Author: Sri Bharath Construction Team
+ */
+
+/* Import Modules */
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./components.css');
+@import url('./layout.css');
+@import url('./animations.css');
+@import url('./responsive.css');
+
+/* External Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');

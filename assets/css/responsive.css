@@ -1,0 +1,305 @@
+/*!
+ * Responsive Design - Mobile-First Approach
+ */
+
+/* Mobile First - Base styles for mobile */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    /* Navigation */
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    /* Typography */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .company-name h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Header */
+    .header-content {
+        height: 70px;
+    }
+
+    .logo-img {
+        height: 35px;
+    }
+
+    .location-info {
+        display: none;
+    }
+
+    /* Sections */
+    :root {
+        --section-padding: 80px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    /* Cards */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* Theme Switcher */
+    .theme-switcher {
+        right: 15px;
+        top: auto;
+        bottom: 20px;
+        transform: none;
+    }
+
+    /* Search Filter */
+    .search-filter-container {
+        margin-bottom: 40px;
+    }
+
+    .filter-buttons {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .mobile-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: var(--container-max-width);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Specific Component Responsive Styles */
+
+/* Service Cards */
+@media (max-width: 768px) {
+    .service-card {
+        text-align: center;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+}
+
+/* Project Cards */
+@media (max-width: 768px) {
+    .project-card.featured {
+        grid-column: 1;
+    }
+
+    .project-image {
+        height: 250px;
+    }
+}
+
+/* Gallery */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About Section */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-stats {
+        position: static;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+/* Contact Form */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form {
+        order: 1;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+}
+
+/* Process Section */
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .process-step::before {
+        display: none;
+    }
+}
+
+/* Team Section */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Sharper images for retina displays */
+    .logo-img,
+    .hero-bg-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    .header,
+    .footer,
+    .mobile-menu,
+    .theme-switcher,
+    .btn {
+        display: none !important;
+    }
+
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+
+    .hero {
+        height: auto !important;
+        padding: 2rem 0 !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --bg-white: #2d2d2d;
+        --bg-light: #333333;
+        --text-color: #ffffff;
+        --text-light: #cccccc;
+        --text-muted: #999999;
+    }
+}
